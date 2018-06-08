@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/mainmenu" android:title="Menu główne" android:icon="@drawable/ic_home_black_24dp"/>
+    <item android:id="@+id/player" android:title="Odtwarzacz filmów" android:icon="@drawable/ic_ondemand_video_black_24dp"/>
+    <item android:id="@+id/videoslist" android:title="Lista filmów"  android:icon="@drawable/ic_local_movies_black_24dp"/>
+    <item android:id="@+id/favs" android:title="Ulubione" android:icon="@drawable/ic_favorite_border_black_24dp"/>
+    <item android:id="@+id/aboutapp" android:title="O aplikacji" android:icon="@drawable/ic_star_border_black_24dp"/>
+
+</menu>
