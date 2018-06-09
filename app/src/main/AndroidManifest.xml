@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mediaapp">
 
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".VideoPlayer" />
-        <activity android:name=".VideosList"></activity>
+        <activity android:name=".VideosList" />
+        <activity android:name=".Favorites"></activity>
     </application>
 
 </manifest>
