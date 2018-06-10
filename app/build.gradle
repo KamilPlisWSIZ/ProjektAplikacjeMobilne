@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'realm-android'
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -19,9 +19,9 @@ android {
 }
 
 repositories {
-        mavenCentral()
-        google()
-    }
+    mavenCentral()
+    google()
+}
 
 
 
@@ -43,6 +43,4 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
 
-
 }
-
