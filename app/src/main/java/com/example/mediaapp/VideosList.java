@@ -70,9 +70,7 @@ public void doStuff(){
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
 
 
-
         //put music player here
-
 
 
             }

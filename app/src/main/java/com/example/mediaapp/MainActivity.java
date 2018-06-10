@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-private CardView videosIcon, vidslistIcon, favsIcon;
+private CardView videosIcon, vidslistIcon, favsIcon, musicplayerIcon;
 
 
 
@@ -21,11 +21,13 @@ private CardView videosIcon, vidslistIcon, favsIcon;
         videosIcon = (CardView) findViewById(R.id.videosicon);
         vidslistIcon = (CardView) findViewById(R.id.vidslisticon);
         favsIcon = (CardView) findViewById(R.id.favsicon);
+        musicplayerIcon = (CardView) findViewById(R.id.musicplayericon);
 
 
         videosIcon.setOnClickListener(this);
         vidslistIcon.setOnClickListener(this);
         favsIcon.setOnClickListener(this);
+        musicplayerIcon.setOnClickListener(this);
 
     }
 
@@ -49,6 +51,7 @@ Intent i;
             case R.id.videosicon : i = new Intent(this,VideoPlayer.class);startActivity(i); break;
             case R.id.vidslisticon : i = new Intent(this,VideosList.class);startActivity(i); break;
             case R.id.favsicon : i = new Intent(this,Favorites.class);startActivity(i); break;
+            case R.id.musicplayericon : i = new Intent(this,MusicPlayer.class);startActivity(i); break;
             default:break;
         }
     }
