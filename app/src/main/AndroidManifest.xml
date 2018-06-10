@@ -23,7 +23,9 @@
         <activity android:name=".VideosList" />
         <activity android:name=".Favorites" />
         <activity android:name=".MusicPlayer" />
-        <activity android:name=".topsongs.TopSongsActivity"></activity>
+        <activity android:name=".topsongs.TopSongsActivity" />
+        <activity android:name=".topsongs.SongDetailsActivity" />
+        <activity android:name=".topsongs.AlbumDetailsActivity"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.content.Intent;
+import android.support.v7.widget.LinearLayoutManager;
+        import android.widget.LinearLayout;
 
         import com.example.mediaapp.R;
 import com.example.mediaapp.api.TrendingAlbum;
@@ -31,11 +34,30 @@ import com.example.mediaapp.api.TrendingAlbum;
 
             @Override
     public void onBindViewHolder(TopSongsViewHolders holder, int position) {
-               TrendingAlbum trendingAlbum = trending.get(position);
+
+                final TrendingAlbum trendingAlbum = trending.get(position);
+
 
                holder.tvPlace.setText(String.valueOf(trendingAlbum.intChartPlace));
                 holder.tvAlbum.setText(trendingAlbum.strAlbum);
                 holder.tvArtist.setText(trendingAlbum.strArtist);
+
+                holder.llContainer.setOnClickListener( new View.OnClickListener() {
+            @Override
+           public void onClick(View v) {
+                                        Intent intent = new Intent(v.getContext(), AlbumDetailsActivity.class );
+
+                                                intent.putExtra(AlbumDetailsActivity.ALBUM, trendingAlbum.strAlbum);
+                                        intent.putExtra(AlbumDetailsActivity.ARTIST, trendingAlbum.strArtist);
+                                        intent.putExtra(AlbumDetailsActivity.ALBUM_ID, trendingAlbum.idAlbum);
+                                        v.getContext().startActivity(intent);
+                                    }
+        });
+
+
+
+
+
 
 
 
@@ -47,7 +69,7 @@ import com.example.mediaapp.api.TrendingAlbum;
             }
 
             public class TopSongsViewHolders extends RecyclerView.ViewHolder {
-
+                LinearLayout llContainer;
                TextView tvPlace;
                 TextView tvAlbum;
         TextView tvArtist;
@@ -56,7 +78,8 @@ import com.example.mediaapp.api.TrendingAlbum;
                public TopSongsViewHolders(View itemView) {
                         super(itemView);
 
-                                tvPlace = itemView.findViewById(R.id.tvPlace);
+                   llContainer = itemView.findViewById(R.id.llContainer);
+                        tvPlace = itemView.findViewById(R.id.tvPlace);
                    tvAlbum = itemView.findViewById(R.id.tvAlbum);
 
                         tvArtist = itemView.findViewById(R.id.tvArtist);
