@@ -7,6 +7,8 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.mediaapp.topsongs.TopSongsActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 private CardView videosIcon, vidslistIcon, favsIcon, musicplayerIcon;
@@ -50,7 +52,7 @@ Intent i;
         switch (v.getId()){
             case R.id.videosicon : i = new Intent(this,VideoPlayer.class);startActivity(i); break;
             case R.id.vidslisticon : i = new Intent(this,VideosList.class);startActivity(i); break;
-            case R.id.favsicon : i = new Intent(this,Favorites.class);startActivity(i); break;
+            case R.id.favsicon : i = new Intent(this,TopSongsActivity.class);startActivity(i); break;
             case R.id.musicplayericon : i = new Intent(this,MusicPlayer.class);startActivity(i); break;
             default:break;
         }
