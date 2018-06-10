@@ -10,8 +10,11 @@
         <color name="colorAccent">#FF4081</color>
         <color name="darkblue">#23283a</color>
         <color name="testcolorblue">#152b38</color>
-        <color name="blue">#12b0ff</color>
+
+
+         <color name="lightblue">#12b0ff</color>
         <color name="pink">#fe104d</color>
+        <color name="green">#99ff00</color>
 
         <color name="black_overlay">#66000000</color>
     </resources>
