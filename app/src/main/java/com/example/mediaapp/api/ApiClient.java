@@ -10,6 +10,6 @@ public interface ApiClient {
 Call<TrendingList> getTrendingList(@Query( "country" ) String country, @Query ( "type" )
 String type, @Query ( "format" ) String format);
     @GET("album.php")
-   Call<Albums>getAlbum(@Query("h")int albumId);
+   Call<Albums>getAlbum(@Query("m")int albumId);
 
 }
