@@ -122,7 +122,10 @@ public class AlbumDetailsActivity extends AppCompatActivity {
 private void addRemoveFavorite()
 {
     Realm realm = Realm. getDefaultInstance ();
-    Favorite favorite = realm.where(Favorite. class ).equalTo( "albumId" , albumId ).findFirst();
+    Favorite favorite = realm
+            .where(Favorite. class )
+            .equalTo( "albumId" , albumId )
+            .findFirst();
     if (favorite == null ) {
         addToFavorites(realm);
     }
