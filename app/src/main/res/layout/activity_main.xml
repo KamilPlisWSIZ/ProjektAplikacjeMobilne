@@ -221,106 +221,102 @@
 
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
+
         <android.support.v7.widget.CardView
             android:id="@+id/favoritesicon"
 
-            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="155dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:clickable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@drawable/cerclebackroundcolor"
-                    android:src="@drawable/ic_favorite_black_24dp"
                     android:padding="10dp"
-                    />
+                    android:src="@drawable/ic_favorite_black_24dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_margin="4dp"
                     android:text="Favorites"
-                    />
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightgray"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="The best of the bests!"
                     android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"
-                    />
+                    android:text="The best of the bests!"
+                    android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-
-            android:clickable="true"
+            android:id="@+id/toptracksicon"
             android:layout_width="160dp"
             android:layout_height="155dp"
             android:layout_margin="10dp"
+            android:clickable="true"
 
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundpurple"
-                    android:src="@drawable/ic_work_black_24dp"
                     android:padding="10dp"
-                    />
+                    android:src="@drawable/ic_whatshot_black_24dp" />
 
                 <TextView
-                    android:layout_width="51dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:text="About"
+                    android:text="Top"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightgray"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="About MediaAPP."
                     android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"
-                    />
+                    android:text="Artist top tracks."
+                    android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
-
-
 
 
     </LinearLayout>

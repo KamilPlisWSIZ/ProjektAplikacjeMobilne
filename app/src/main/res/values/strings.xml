@@ -4,4 +4,11 @@
     <string name="top_songs">Top albums</string>
     <string name="artist">Artysta</string>
     <string name="favorites">Lista ulubionych albumów</string>
+    <string name="search_track">Najpopularniejsze utwory wykonawcy:</string>
+    <string name="search">Szukaj</string>
+    <string name="enter_artist_name">Szukany wykonawca</string>
+    <string name="track_album">Album</string>
+    <string name="genre">Rodzaj</string>
+    <string name="track_artist">Wykonawca</string>
+
 </resources>

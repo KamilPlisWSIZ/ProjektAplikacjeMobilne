@@ -12,4 +12,8 @@ String type, @Query ( "format" ) String format);
     @GET("album.php")
    Call<Albums>getAlbum(@Query("m")int albumId);
 
+    @GET("track-top10.php")
+    Call<SearchTracks> searchTracks(@Query("s") String artist);
+
+
 }

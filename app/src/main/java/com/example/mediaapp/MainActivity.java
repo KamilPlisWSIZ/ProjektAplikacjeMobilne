@@ -7,11 +7,12 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 
 import com.example.mediaapp.favorites.FavoritesActivity;
+import com.example.mediaapp.searchtrack.SearchTrackActivity;
 import com.example.mediaapp.topsongs.TopSongsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-private CardView videosIcon, vidslistIcon, favoritesIcon, musicplayerIcon, topalbumsIcon;
+private CardView videosIcon, toptracksIcon,vidslistIcon, favoritesIcon, musicplayerIcon, topalbumsIcon;
 
 
 
@@ -25,6 +26,7 @@ private CardView videosIcon, vidslistIcon, favoritesIcon, musicplayerIcon, topal
         topalbumsIcon = (CardView) findViewById(R.id.topalbumsicon);
         favoritesIcon = (CardView) findViewById(R.id.favoritesicon);
         musicplayerIcon = (CardView) findViewById(R.id.musicplayericon);
+        toptracksIcon = (CardView) findViewById(R.id.toptracksicon);
 
 
         videosIcon.setOnClickListener(this);
@@ -32,6 +34,7 @@ private CardView videosIcon, vidslistIcon, favoritesIcon, musicplayerIcon, topal
         topalbumsIcon.setOnClickListener(this);
         musicplayerIcon.setOnClickListener(this);
         favoritesIcon.setOnClickListener(this);
+        toptracksIcon.setOnClickListener(this);
     }
 
 
@@ -56,6 +59,7 @@ Intent i;
             case R.id.topalbumsicon : i = new Intent(this,TopSongsActivity.class);startActivity(i); break;
             case R.id.musicplayericon : i = new Intent(this,MusicPlayer.class);startActivity(i); break;
             case R.id.favoritesicon : i = new Intent(this,FavoritesActivity.class);startActivity(i); break;
+            case R.id.toptracksicon : i = new Intent(this,SearchTrackActivity.class);startActivity(i); break;
             default:break;
         }
     }

@@ -22,14 +22,18 @@
         </activity>
         <activity android:name=".VideoPlayer" />
         <activity android:name=".VideosList" />
-
         <activity android:name=".MusicPlayer" />
         <activity
             android:name=".topsongs.TopSongsActivity"
             android:label="@string/top_songs" />
         <activity android:name=".topsongs.AlbumDetailsActivity" />
+        <activity
+            android:name=".favorites.FavoritesActivity"
+            android:label="@string/favorites" />
+        <activity
+            android:name=".searchtrack.SearchTrackActivity"
+            android:label="@string/search_track" />
 
-        <activity android:name=".favorites.FavoritesActivity" android:label="@string/favorites"/>
     </application>
 
 </manifest>
