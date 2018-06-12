@@ -4,7 +4,7 @@ public class TrendingAlbum {
 
     public  int idAlbum;
     public  int idArtist;
-    public int idTruck;
+
     public int intChartPlace;
     public String strAlbum;
     public String strArtist;

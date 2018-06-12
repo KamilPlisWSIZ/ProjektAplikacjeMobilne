@@ -1,24 +1,27 @@
+
 package com.example.mediaapp.topsongs;
 
 import android.support.annotation.NonNull;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.support.v7.widget.RecyclerView;
-        import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.Toast;
-        import com.example.mediaapp.api.TrendingAlbum;
-        import com.example.mediaapp.R;
-        import com.example.mediaapp.api.ApiService;
 
-        import com.example.mediaapp.api.TrendingList;
+import com.example.mediaapp.R;
+import com.example.mediaapp.api.ApiService;
+
+import com.example.mediaapp.api.TrendingList;
+import com.example.mediaapp.api.TrendingAlbum;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
-        import java.util.List;
+import java.util.List;
 
-        import retrofit2.Call;
-        import retrofit2.Callback;
-        import retrofit2.Response;
-
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class TopSongsActivity extends AppCompatActivity {
 
@@ -72,4 +75,12 @@ public class TopSongsActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true ;
+    }
 }
+
+
