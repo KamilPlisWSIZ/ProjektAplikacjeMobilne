@@ -38,27 +38,27 @@ public class VideosList extends AppCompatActivity {
 
 
         if(ContextCompat.checkSelfPermission(VideosList.this,
-            Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
 
-        if(ActivityCompat.shouldShowRequestPermissionRationale(VideosList.this,
-                Manifest.permission.READ_EXTERNAL_STORAGE)){
+            if(ActivityCompat.shouldShowRequestPermissionRationale(VideosList.this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE)){
 
-            ActivityCompat.requestPermissions(VideosList.this,
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSION_REQUEST);
+                ActivityCompat.requestPermissions(VideosList.this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSION_REQUEST);
+            }
+            else{
+                ActivityCompat.requestPermissions(VideosList.this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSION_REQUEST);
+            }
+
         }
         else{
-            ActivityCompat.requestPermissions(VideosList.this,
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSION_REQUEST);
+            doStuff();
         }
-
-        }
-    else{
-        doStuff();
-    }
     }
 
 
-public void doStuff(){
+    public void doStuff(){
         listView = (ListView)findViewById(R.id.listView);
         arrayList = new ArrayList<>();
         getVideos();
@@ -70,7 +70,7 @@ public void doStuff(){
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
 
 
-        //put music player here
+                //put music player here
 
 
             }
@@ -78,24 +78,24 @@ public void doStuff(){
     }
 
     public void getVideos(){
-    ContentResolver contentResolver = getContentResolver();
-    Uri videoUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
-    Cursor videoCursor = contentResolver.query(videoUri, null, null, null,null);
+        ContentResolver contentResolver = getContentResolver();
+        Uri videoUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+        Cursor videoCursor = contentResolver.query(videoUri, null, null, null,null);
 
-    if(videoCursor != null && videoCursor.moveToFirst()) {
-        int videoTitle = videoCursor.getColumnIndex(MediaStore.Video.Media.TITLE);
-        int videoSize = videoCursor.getColumnIndex(MediaStore.Video.Media.SIZE);
+        if(videoCursor != null && videoCursor.moveToFirst()) {
+            int videoTitle = videoCursor.getColumnIndex(MediaStore.Video.Media.TITLE);
+            int videoSize = videoCursor.getColumnIndex(MediaStore.Video.Media.SIZE);
 
-        do{
-            String currentTitle = "Nazwa: " + videoCursor.getString(videoTitle);
-            String currentSize =  "Rozmiar: " + videoCursor.getString(videoSize);
-            arrayList.add(currentTitle + "\n"+ currentSize);
-        } while (videoCursor.moveToNext());
+            do{
+                String currentTitle = "Nazwa: " + videoCursor.getString(videoTitle);
+                String currentSize =  "Rozmiar: " + videoCursor.getString(videoSize);
+                arrayList.add(currentTitle + "\n"+ currentSize);
+            } while (videoCursor.moveToNext());
 
+        }
     }
-}
 
-@Override
+    @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
         switch (requestCode){
             case MY_PERMISSION_REQUEST: {
@@ -115,7 +115,7 @@ public void doStuff(){
                 return;
             }
         }
-}
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
