@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mediaapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -22,7 +22,10 @@
         <activity android:name=".VideoPlayer" />
         <activity android:name=".VideosList" />
         <activity android:name=".Favorites" />
-        <activity android:name=".MusicPlayer"></activity>
+        <activity android:name=".MusicPlayer" />
+        <activity android:name=".topsongs.TopSongsActivity" />
+        <activity android:name=".topsongs.SongDetailsActivity" />
+        <activity android:name=".topsongs.AlbumDetailsActivity"></activity>
     </application>
 
 </manifest>
