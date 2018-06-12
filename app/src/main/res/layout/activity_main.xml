@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="0dp"
     android:background="@color/backgroundcolor">
 
 <LinearLayout
@@ -21,7 +21,7 @@
 
             android:clickable="true"
             android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_height="155dp"
             android:layout_margin="10dp">
 
             <LinearLayout
@@ -30,8 +30,8 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundpurple"
                     android:src="@drawable/ic_ondemand_video_black_24dp"
                     android:padding="10dp"
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_margin="10dp"
+                    android:layout_margin="4dp"
                     android:text="Videos Player"
                     />
 
@@ -48,7 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/lightgray"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="5dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
 
             android:clickable="true"
             android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_height="155dp"
             android:layout_margin="10dp">
 
             <LinearLayout
@@ -76,8 +76,8 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundblue"
                     android:src="@drawable/ic_list_black_24dp"
                     android:padding="10dp"
@@ -86,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_margin="10dp"
+                    android:layout_margin="4dp"
                     android:text="Videos List"
                     />
 
@@ -94,13 +94,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/lightgray"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="5dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="All vids from your storage"
+                    android:text="All vids from SDCard"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"
                     />
@@ -121,11 +121,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.CardView
-            android:id="@+id/favsicon"
+            android:id="@+id/topalbumsicon"
 
             android:clickable="true"
             android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_height="155dp"
             android:layout_margin="10dp">
 
             <LinearLayout
@@ -134,9 +134,115 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundorange"
+                    android:src="@drawable/ic_album_black_24dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:text="Top 6 albums"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgray"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="The best of the bests!"
+                    android:padding="5dp"
+                    android:textColor="@android:color/darker_gray"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/musicplayericon"
+            android:clickable="true"
+            android:layout_width="160dp"
+            android:layout_height="155dp"
+            android:layout_margin="10dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/cerclebackgroundpink"
+                    android:src="@drawable/ic_list_black_24dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:text="Music player"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgray"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Choose and PLAY."
+                    android:padding="5dp"
+                    android:textColor="@android:color/darker_gray"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:id="@+id/favoritesicon"
+
+            android:clickable="true"
+            android:layout_width="160dp"
+            android:layout_height="155dp"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/cerclebackroundcolor"
                     android:src="@drawable/ic_favorite_black_24dp"
                     android:padding="10dp"
                     />
@@ -144,7 +250,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_margin="10dp"
+                    android:layout_margin="4dp"
                     android:text="Favorites"
                     />
 
@@ -167,10 +273,10 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/musicplayericon"
+
             android:clickable="true"
             android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_height="155dp"
             android:layout_margin="10dp"
 
             >
@@ -181,19 +287,19 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpink"
-                    android:src="@drawable/ic_list_black_24dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/cerclebackgroundpurple"
+                    android:src="@drawable/ic_work_black_24dp"
                     android:padding="10dp"
                     />
+
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="51dp"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_margin="10dp"
-                    android:text="Music player"
-                    />
+                    android:layout_margin="4dp"
+                    android:text="About"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
@@ -205,7 +311,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Listen to songs from your sdcard."
+                    android:text="About MediaAPP."
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"
                     />
@@ -218,6 +324,7 @@
 
 
     </LinearLayout>
+
 
 
 </LinearLayout>

@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".MediaPlayer"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,13 +22,14 @@
         </activity>
         <activity android:name=".VideoPlayer" />
         <activity android:name=".VideosList" />
-        <activity android:name=".Favorites" />
+
         <activity android:name=".MusicPlayer" />
         <activity
             android:name=".topsongs.TopSongsActivity"
+            android:label="@string/top_songs" />
+        <activity android:name=".topsongs.AlbumDetailsActivity" />
 
-                    android:label="@string/top_songs" />
-                <activity android:name=".topsongs.AlbumDetailsActivity"></activity>
+        <activity android:name=".favorites.FavoritesActivity" android:label="@string/favorites"/>
     </application>
 
 </manifest>
