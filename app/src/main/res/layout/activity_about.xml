@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="16dp"
+android:paddingLeft="16dp"
+android:paddingRight="16dp"
+android:paddingTop="16dp"
+android:orientation="vertical"
+tools:context=".AboutActivity"
+
+android:padding="0dp"
+android:background="@color/backgroundcolor">
+
+
+
+
+<TextView
+    android:text="Twórcy aplikacji:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="True"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/textViesw"
+    android:textSize="24sp"
+
+    />
+
+<TextView
+    android:text="Kamil Pliś"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="True"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/textView"
+    android:textSize="24sp"
+
+    />
+<TextView
+    android:text="Rafał Szafran"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="True"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/textViewxx"
+    android:textSize="24sp"
+
+    />
+
+
+
+</LinearLayout>
