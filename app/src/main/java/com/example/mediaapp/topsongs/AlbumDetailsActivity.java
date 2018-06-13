@@ -1,3 +1,9 @@
+/*
+
+*Klasa AlbumDetailsActivity służy do przesyłania informacji szczegółowych na temat albumu
+ */
+
+
 package com.example.mediaapp.topsongs;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -54,6 +60,8 @@ public class AlbumDetailsActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(album);
         getSupportActionBar().setSubtitle(artist);
 
+        //Pobranie informacji z Api na temat konkretnego utworu
+
         ApiService.getService().getAlbum(albumId).enqueue(new Callback<Albums>() {
             @Override
             public void onResponse(@NonNull Call<Albums> call, @NonNull Response<Albums>
@@ -68,7 +76,7 @@ public class AlbumDetailsActivity extends AppCompatActivity {
             public void onFailure(@NonNull Call<Albums> call, @NonNull Throwable t) {
                 Toast.makeText(
                         AlbumDetailsActivity.this,
-                        "Błąd pobierania danych: " + t.getLocalizedMessage(),
+                        "Error: " + t.getLocalizedMessage(),
                         Toast.LENGTH_SHORT
                 ).show();
             }
@@ -76,7 +84,7 @@ public class AlbumDetailsActivity extends AppCompatActivity {
 
 
     }
-
+    //Funkcja przypisująca do zmiennych pobrane dane
     private void showData(Album album) {
         TextView tvAlbum = findViewById(R.id.tvAlbum);
         TextView tvArtist = findViewById(R.id.tvArtist);
@@ -85,7 +93,7 @@ public class AlbumDetailsActivity extends AppCompatActivity {
         tvAlbum.setText(album.strAlbum);
         tvArtist.setText(album.strArtist);
 
-
+        //Wyświetlenie okładki albumu przy użyciu biblioteki Glide
         if (album.strAlbumThumb != null && !album.strAlbumThumb.isEmpty()) {
             ImageView ivThumb = findViewById(R.id.ivThumb);
             Glide.with(this).load(album.strAlbumThumb).into(ivThumb);
@@ -108,7 +116,9 @@ public class AlbumDetailsActivity extends AppCompatActivity {
 
     }
     @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
+
+    //Obsługa przycisku ulubionych
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.itemFavorite :
                 addRemoveFavorite();
@@ -119,7 +129,9 @@ public class AlbumDetailsActivity extends AppCompatActivity {
 
 
               }
-private void addRemoveFavorite()
+
+              //Dodawanie i usuwanie elementu z bazy
+              private void addRemoveFavorite()
 {
     Realm realm = Realm. getDefaultInstance ();
     Favorite favorite = realm
@@ -143,7 +155,7 @@ private void addRemoveFavorite()
             favorite.setAlbumId( albumId );
             favorite.setDate( new Date());
 
-            Toast.makeText (AlbumDetailsActivity.this,"Dodano do ulubionych", Toast.LENGTH_SHORT).show();
+            Toast.makeText (AlbumDetailsActivity.this,"Added to favorites!", Toast.LENGTH_SHORT).show();
         }
     });
 
@@ -151,7 +163,7 @@ private void addRemoveFavorite()
     private void removeFromFavorites(Realm realm, final Favorite favorite) { realm.executeTransaction( new Realm.Transaction() {
         @Override
         public void execute( @NonNull Realm realm) { favorite .deleteFromRealm();
-        Toast. makeText (AlbumDetailsActivity.this , "Usunięto z ulubionych", Toast.LENGTH_SHORT ).show();
+        Toast. makeText (AlbumDetailsActivity.this , "Removed from favorites", Toast.LENGTH_SHORT ).show();
         }
     });
     }

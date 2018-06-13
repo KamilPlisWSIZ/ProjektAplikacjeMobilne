@@ -2,13 +2,13 @@
     <string name="app_name">MediaApp</string>
     <string name="album">Album</string>
     <string name="top_songs">Top albums</string>
-    <string name="artist">Artysta</string>
-    <string name="favorites">Lista ulubionych albumów</string>
-    <string name="search_track">Najpopularniejsze utwory wykonawcy:</string>
-    <string name="search">Szukaj</string>
-    <string name="enter_artist_name">Szukany wykonawca</string>
+    <string name="artist">Artist</string>
+    <string name="favorites">List of favorites albums</string>
+    <string name="search_track">Top tracks of this artist:</string>
+    <string name="search">Search</string>
+    <string name="enter_artist_name">Search artist</string>
     <string name="track_album">Album</string>
-    <string name="genre">Rodzaj</string>
-    <string name="track_artist">Wykonawca</string>
+    <string name="genre">Genre</string>
+    <string name="track_artist">Artist</string>
 
 </resources>

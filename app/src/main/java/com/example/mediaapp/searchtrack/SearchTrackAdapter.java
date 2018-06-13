@@ -1,3 +1,9 @@
+/*
+*
+* Klasa służąca do przesyłania pobranych przez api elementów do widoku w którym wyszukujemy najpopularniejsze utwory artysty
+* */
+
+
 package com.example.mediaapp.searchtrack;
 
 
@@ -20,6 +26,8 @@ public class SearchTrackAdapter extends RecyclerView.Adapter<SearchTrackAdapter.
         this.tracks = tracks;
     }
 
+
+    //Zapamiętywanie ostatnio wpisywanego artysty
     @Override
     public SearchTrackViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
@@ -43,6 +51,8 @@ public class SearchTrackAdapter extends RecyclerView.Adapter<SearchTrackAdapter.
         return tracks == null ? 0 : tracks.size();
     }
 
+
+    //Przesyłanie zmiennych zawierających dane na temat utworu do elementu RecyclerView
     public class SearchTrackViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvTrack;

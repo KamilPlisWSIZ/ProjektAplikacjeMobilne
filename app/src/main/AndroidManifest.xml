@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".VideoPlayer" />
         <activity android:name=".VideosList" />
+        <activity android:name=".AboutActivity" />
         <activity android:name=".MusicPlayer" />
         <activity
             android:name=".topsongs.TopSongsActivity"

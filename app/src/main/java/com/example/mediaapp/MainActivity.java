@@ -1,3 +1,11 @@
+/*
+*
+* Klasa MainActivity odpowiada za menu główne aplikacji. Zostają tu przypisane przyciski
+* do odpowiednich aktywności
+*
+* */
+
+
 package com.example.mediaapp;
 
 import android.content.Intent;
@@ -38,7 +46,7 @@ private CardView videosIcon, toptracksIcon,vidslistIcon, favoritesIcon, musicpla
     }
 
 
-    //button methods
+    //metody przycisku
     public void openVideoPlayer(){
         Intent intent = new Intent(this, VideoPlayer.class );
         startActivity(intent);

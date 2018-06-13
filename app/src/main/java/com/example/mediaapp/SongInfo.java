@@ -1,3 +1,7 @@
+/*
+* Klasa SongInfo przesyła informacje na temat konkretnego utworu przechowywanego w pamięci
+* */
+
 package com.example.mediaapp;
 
 public class SongInfo {
@@ -30,6 +34,8 @@ public class SongInfo {
         Artistname = artistname;
     }
 
+
+    //Pobranie i przypisanie do zmiennej adresu pliku
     public String getSongUrl() {
         return SongUrl;
     }

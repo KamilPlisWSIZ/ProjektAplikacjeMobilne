@@ -1,6 +1,12 @@
+/*
+*
+* KlasaTopSongsAdapter służy do przesyłania do widoku TopSongsActivity informacji na temat wszystkich albumów
+* które znajdują się na top - liście
+*
+* */
+
+
 package com.example.mediaapp.topsongs;
-
-
 
         import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,6 +38,8 @@ import com.example.mediaapp.api.TrendingAlbum;
                        return new TopSongsViewHolders(view);
            }
 
+
+           //Przypisanie pobranych danych do konkretnego elementu na liście
             @Override
     public void onBindViewHolder(TopSongsViewHolders holder, int position) {
 

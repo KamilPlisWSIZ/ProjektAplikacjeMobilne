@@ -1,3 +1,9 @@
+/*
+* Klasa VideosList ma za zadanie pobrać wszystkie pliki video zgromadzone w pamięci
+* i przekazać je do elementu ListView
+* */
+
+
 package com.example.mediaapp;
 
 import android.Manifest;
@@ -57,7 +63,7 @@ public class VideosList extends AppCompatActivity {
         }
     }
 
-
+    //Przesyła pobrane w getVideos zmienne do elementu ListView
     public void doStuff(){
         listView = (ListView)findViewById(R.id.listView);
         arrayList = new ArrayList<>();
@@ -69,14 +75,13 @@ public class VideosList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
 
-
-                //put music player here
-
-
             }
         });
     }
 
+
+
+    //pobiera pliki video i przypisuje ich tytuł i rozmiar do odpowiednich zmiennych
     public void getVideos(){
         ContentResolver contentResolver = getContentResolver();
         Uri videoUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
@@ -87,14 +92,14 @@ public class VideosList extends AppCompatActivity {
             int videoSize = videoCursor.getColumnIndex(MediaStore.Video.Media.SIZE);
 
             do{
-                String currentTitle = "Nazwa: " + videoCursor.getString(videoTitle);
-                String currentSize =  "Rozmiar: " + videoCursor.getString(videoSize);
+                String currentTitle = "Title: " + videoCursor.getString(videoTitle);
+                String currentSize =  "Size: " + videoCursor.getString(videoSize);
                 arrayList.add(currentTitle + "\n"+ currentSize);
             } while (videoCursor.moveToNext());
 
         }
     }
-
+//Metoda ta odpowiada za pozwolenia w aplikacji które mogą być udzielone lub też nie
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
         switch (requestCode){
@@ -119,7 +124,7 @@ public class VideosList extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
+        onBackPressed();//obsługuje przycisk wstercz urządzenia
 
         return true;
     }

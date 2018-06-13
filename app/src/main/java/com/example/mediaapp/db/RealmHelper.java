@@ -1,7 +1,11 @@
+/*
+* Klasa RealmAdapter służy do przesyłania danych pobranych z bazy realm do aktywności Favorites
+* Pobiera ona nazwę albumu poczym przesyła ją do elementu ArrayList
+* */
+
+
 package com.example.mediaapp.db;
-
 import java.util.ArrayList;
-
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;

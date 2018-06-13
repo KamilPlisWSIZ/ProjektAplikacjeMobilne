@@ -1,3 +1,7 @@
+/*
+* Klasa MusicPlayer odpowiada za przesyłanie wszystkich elementów po uruchomieniu aktywności odtwarzacza
+* */
+
 package com.example.mediaapp;
 
         import android.Manifest;
@@ -47,6 +51,8 @@ public class MusicPlayer extends AppCompatActivity {
         recyclerView.addItemDecoration(dividerItemDecoration);
         songAdapter.setOnItemClickListener(new SongAdapter.OnItemClickListener() {
             @Override
+
+            //Przypisanie funkcjonalności do przycisku
             public void onItemClick(final Button b, View view, final SongInfo obj, int position) {
                 if(b.getText().equals("Stop")){
                     mediaPlayer.stop();
@@ -118,7 +124,7 @@ public class MusicPlayer extends AppCompatActivity {
         }
 
     }
-
+    //Sprawdzenie uprawnień dostępu do pamięci
     private void checkUserPermission(){
         if(Build.VERSION.SDK_INT>=23){
             if(ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -129,6 +135,7 @@ public class MusicPlayer extends AppCompatActivity {
         }
         loadSongs();
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -147,7 +154,7 @@ public class MusicPlayer extends AppCompatActivity {
         }
 
     }
-
+// metoda ta ładuje piosenki
     private void loadSongs(){
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String selection = MediaStore.Audio.Media.IS_MUSIC+"!=0";
