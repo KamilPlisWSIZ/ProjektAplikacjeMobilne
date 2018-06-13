@@ -2,6 +2,11 @@ package com.example.mediaapp.db;
 import java.util.Date;
 import io.realm.RealmObject;
 
+/*
+* Klasa Favorites służy do przesyłania danych na temat ulubionych.
+* Dane przechowywane są w bazie Realm.
+* Dane które lądują w bazie przesyłane sa z aktywności TopSongsActivity
+* */
 
 public class Favorite extends RealmObject {
     private String album ;

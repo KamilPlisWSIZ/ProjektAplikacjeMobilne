@@ -1,3 +1,8 @@
+/*
+*Klasa Favorites Activity służy do przesyłania elementów które pojawią się na ekranie
+ * użytkownika po wejściu do aktywności ulubionych
+  * Inicjuje ona pobieranie danych z klasy RealmHelper*/
+
 package com.example.mediaapp.favorites;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

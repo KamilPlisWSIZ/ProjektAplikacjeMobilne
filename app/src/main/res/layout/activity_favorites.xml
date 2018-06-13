@@ -12,7 +12,6 @@
     tools:context=".favorites.FavoritesActivity"
     >
 
-
     <ListView
         android:id="@+id/lv"
         android:layout_width="wrap_content"
