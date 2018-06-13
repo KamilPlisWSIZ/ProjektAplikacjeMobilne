@@ -147,7 +147,7 @@ public class MusicPlayer extends AppCompatActivity {
         }
 
     }
-
+// metoda ta ładuje piosenki
     private void loadSongs(){
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String selection = MediaStore.Audio.Media.IS_MUSIC+"!=0";

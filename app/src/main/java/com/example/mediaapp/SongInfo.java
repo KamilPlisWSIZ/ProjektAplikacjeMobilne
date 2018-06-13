@@ -4,7 +4,7 @@ public class SongInfo {
     private String Songname;
     private String Artistname;
     private String SongUrl;
-
+// W klasie zawarte są informacje na temat piosenki typu String
     public SongInfo() {
     }
 

@@ -29,9 +29,9 @@ public class SearchTrackActivity extends AppCompatActivity {
     RecyclerView rvList;
     SharedPreferences sharedPreferences;
 
-    List<SearchTrack> tracks = new ArrayList<>(0);
+    List<SearchTrack> tracks = new ArrayList<>(0);// modyfikacja metody onCreate
 
-
+//przeładowujemy metodę onCreate() gdzie za pomocą funkcji setContentView(), ładujemy wcześniej przygotowany plik layoutem.
     @Override
 protected void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
@@ -86,10 +86,10 @@ setContentView(R.layout.activity_search_track);
     }
 
     private void rememberQuery(String query){
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+        SharedPreferences.Editor editor = sharedPreferences.edit();//klasa ta umożliwia nam modyfikację wpisów
         editor.putString("query",query);
         editor.apply();
-        etQuery.setText(sharedPreferences.getString("query", null));
+        etQuery.setText(sharedPreferences.getString("query", null));//pobranie danych dla klucza query, metoda gerString
     }
 
 
@@ -98,10 +98,10 @@ setContentView(R.layout.activity_search_track);
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true ;
+        onBackPressed();//Wywołanie metody, przycisk wtecz urządzenia
+        return true ;// zwraca true, ponieważ zwrócona musi być wartość boolean
     }
-
+//metoda updateList zostanie wywołana w metodzie onResponse() w momencie otrzymania danych z API
     private void updateList(SearchTracks searchTracks){
         tracks.clear();
         tracks.addAll(searchTracks.track);
@@ -109,7 +109,7 @@ setContentView(R.layout.activity_search_track);
         rvList.getAdapter().notifyDataSetChanged();
     }
 
-
+//metoda ta zostania wywołana po przez kliknięcie na przycisk, przerywanie następuję po przez użycie instrukcji return
     private void searchTracks(String query) {
         getSupportActionBar().setSubtitle(query);
 
@@ -138,7 +138,7 @@ setContentView(R.layout.activity_search_track);
             }
 
 
-
+// dzięki tej aktywności możemy otrzymać informacje o stanie pobieranych danych
             @Override
             public void onFailure(@NonNull Call<SearchTracks> call, Throwable t) {
                 Toast.makeText(SearchTrackActivity.this, "Błąd pobierania danych: " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

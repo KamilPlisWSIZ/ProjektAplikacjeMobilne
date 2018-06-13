@@ -70,7 +70,7 @@ public class VideosList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
 
 
-                //put music player here
+                //umieść odtwarzacz
 
 
             }
@@ -94,7 +94,7 @@ public class VideosList extends AppCompatActivity {
 
         }
     }
-
+//Metoda ta odpowiada za pozwolenia w aplikacji które mogą być udzielone lub też nie
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
         switch (requestCode){
@@ -119,9 +119,9 @@ public class VideosList extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
+        onBackPressed();//obsługuje przycisk wsterz urządzenia
 
-        return true;
+        return true;//zwraca wartość typu boolean
     }
 
 

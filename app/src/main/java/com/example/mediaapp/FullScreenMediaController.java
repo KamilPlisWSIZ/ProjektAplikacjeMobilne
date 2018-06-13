@@ -23,7 +23,7 @@ public class FullScreenMediaController extends MediaController {
 
         super.setAnchorView(view);
 
-        //image button for full screen to be added to media controller
+        //przycisk obrazu, aby dodać pełny ekran do kontrolera multimediów
         fullScreen = new ImageButton (super.getContext());
 
         FrameLayout.LayoutParams params =
@@ -33,7 +33,7 @@ public class FullScreenMediaController extends MediaController {
         params.rightMargin = 80;
         addView(fullScreen, params);
 
-        //fullscreen indicator from intent
+        //pełnoekranowy wskaźnik od intencji
         isFullScreen =  ((Activity)getContext()).getIntent().
                 getStringExtra("fullScreenInd");
 
@@ -43,7 +43,7 @@ public class FullScreenMediaController extends MediaController {
             fullScreen.setImageResource(R.drawable.ic_fullscreen);
         }
 
-        //add listener to image button to handle full screen and exit full screen events
+        //dodaj przycisk, aby obsłużyć pełny ekran i wyjść z wydarzeń na pełnym ekranie
         fullScreen.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

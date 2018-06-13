@@ -38,7 +38,7 @@ private CardView videosIcon, toptracksIcon,vidslistIcon, favoritesIcon, musicpla
     }
 
 
-    //button methods
+    //metody przycisku
     public void openVideoPlayer(){
         Intent intent = new Intent(this, VideoPlayer.class );
         startActivity(intent);
