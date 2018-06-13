@@ -1,3 +1,8 @@
+/*
+*
+* Klasa SongAdapter służy do przesyłania do aktywności informacji na temat pobranych utworów
+* */
+
 package com.example.mediaapp;
 
 import android.content.Context;
@@ -37,6 +42,8 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
         return new SongHolder(myView);
     }
 
+
+    //Bindowanie, łączenie informacji o pliku z konkretnym elementem listy
     @Override
     public void onBindViewHolder(final SongHolder songHolder, final int i) {
         final SongInfo s = _songs.get(i);
@@ -57,6 +64,8 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
         return _songs.size();
     }
 
+
+    //Przesłanie danych do RecyclerView
     public class SongHolder extends RecyclerView.ViewHolder {
         TextView tvSongName,tvSongArtist;
         Button btnAction;

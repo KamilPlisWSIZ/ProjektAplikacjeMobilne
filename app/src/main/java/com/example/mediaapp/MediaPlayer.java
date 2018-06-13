@@ -1,14 +1,11 @@
 package com.example.mediaapp;
 
-
-
-
 import android.app.Application;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 public class MediaPlayer extends Application {
-// klasa obsługująca aplikację
+// klasa obsługująca aplikację zawiera informacje na temat konfiguracji Realm
     @Override
     public void onCreate() {
         super.onCreate();

@@ -1,3 +1,11 @@
+/*
+*
+* Klasa MainActivity odpowiada za menu główne aplikacji. Zostają tu przypisane przyciski
+* do odpowiednich aktywności
+*
+* */
+
+
 package com.example.mediaapp;
 
 import android.content.Intent;

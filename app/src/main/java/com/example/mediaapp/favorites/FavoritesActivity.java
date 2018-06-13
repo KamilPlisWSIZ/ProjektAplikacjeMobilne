@@ -40,6 +40,7 @@ ListView lv;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites);
 
+        //Przesłanie pobranych z bazy danych elementów do widoku listy
 
         lv = (ListView) findViewById(R.id.lv);
         Realm.init(getApplicationContext());

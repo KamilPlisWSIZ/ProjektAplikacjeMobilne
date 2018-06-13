@@ -1,3 +1,9 @@
+/*
+*
+* Klasa służąca do poszukiwania najpopularniejszych utworów danego wykonawcy
+* */
+
+
 package com.example.mediaapp.searchtrack;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
@@ -125,13 +131,13 @@ setContentView(R.layout.activity_search_track);
                 SearchTracks searchTracks = response.body();
 
                 if (searchTracks == null || searchTracks.track == null || searchTracks.track.isEmpty()) {
-                    Toast.makeText(SearchTrackActivity.this, "Brak wyników", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchTrackActivity.this, "No items!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
 
 
-                Toast.makeText(SearchTrackActivity.this, "Znaleziono " + searchTracks.track.size() + " wyników", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SearchTrackActivity.this, "Found " + searchTracks.track.size() + " items", Toast.LENGTH_SHORT).show();
                 updateList(searchTracks);
 
 

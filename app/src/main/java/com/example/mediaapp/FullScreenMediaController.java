@@ -1,3 +1,9 @@
+/*
+*
+* Klasa FullScreenMediaController udostępnia możliwość odtwarzania pliku wideo na pełnym ekranie, bez pasków stanu itd.
+* */
+
+
 package com.example.mediaapp;
 
 import android.app.Activity;
@@ -33,7 +39,7 @@ public class FullScreenMediaController extends MediaController {
         params.rightMargin = 80;
         addView(fullScreen, params);
 
-        //pełnoekranowy wskaźnik od intencji
+
         isFullScreen =  ((Activity)getContext()).getIntent().
                 getStringExtra("fullScreenInd");
 

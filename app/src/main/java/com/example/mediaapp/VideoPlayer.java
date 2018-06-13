@@ -1,3 +1,7 @@
+/*
+* Klasa VideoPlayer odpowiada za odtwarzanie pliku wideo
+* */
+
 package com.example.mediaapp;
 
 
@@ -20,10 +24,11 @@ public class VideoPlayer extends AppCompatActivity {
 
         setContentView(R.layout.activity_video_player);
 
+        //Przesyłanie pliku wideo do elementu VideoView
         VideoView videoView = (VideoView) findViewById(R.id.video_view);
 
 
-
+        //Przypisanie adresu pliku do zmiennej
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.samplevideo;
 
         String fullScreen =  getIntent().getStringExtra("fullScreenInd");
@@ -36,13 +41,14 @@ public class VideoPlayer extends AppCompatActivity {
 
 
         Uri uri = Uri.parse(videoPath);
+        //Uruchomienie odtwarzania
         videoView.setVideoURI(uri);
 
 
 
         MediaController mediaController = new MediaController(this);
 
-
+        //Rozszerzenie funkcjonalności o opcję pełnego ekranu
         mediaController = new FullScreenMediaController(this);
         mediaController.setAnchorView(videoView);
 
