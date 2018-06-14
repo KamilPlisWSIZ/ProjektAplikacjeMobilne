@@ -2,7 +2,7 @@
 *
 * Klasa SongAdapter służy do przesyłania do aktywności informacji na temat pobranych utworów
 * */
-
+//Dodano Rafał w56998
 package com.example.mediaapp;
 
 import android.content.Context;

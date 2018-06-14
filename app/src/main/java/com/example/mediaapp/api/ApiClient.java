@@ -1,4 +1,7 @@
 //Klasa ApiClient przechowuje informacje na temat podstron z których będziemy pobierać dane w formacie JSON
+//Dodano - Rafał w58998
+//Dodano - Kamil w57449
+
 package com.example.mediaapp.api;
 
 

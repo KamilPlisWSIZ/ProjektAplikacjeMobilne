@@ -7,7 +7,7 @@ import io.realm.RealmObject;
 * Dane przechowywane są w bazie Realm.
 * Dane które lądują w bazie przesyłane sa z aktywności TopSongsActivity
 * */
-
+//Dodano - Kamil w57449
 public class Favorite extends RealmObject {
     private String album ;
     private String artist ;

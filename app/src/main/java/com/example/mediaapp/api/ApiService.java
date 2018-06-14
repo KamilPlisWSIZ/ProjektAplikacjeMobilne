@@ -3,7 +3,7 @@
 * Klasa ApiService definiuje połączenie z API
 *
 * */
-
+//Dodano - Rafał w56998
 package com.example.mediaapp.api;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

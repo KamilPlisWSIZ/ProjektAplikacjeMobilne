@@ -2,7 +2,7 @@
 * Klasa VideoPlayer odpowiada za odtwarzanie pliku wideo
 * */
 
-//Dodał - Kamil w57449
+//Dodano - Kamil w57449
 
 package com.example.mediaapp;
 

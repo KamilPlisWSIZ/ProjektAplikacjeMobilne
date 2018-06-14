@@ -1,4 +1,5 @@
 /*Klasa AboutActivity wyswietla informacje o autorach*/
+//Dodano - Kamil w57449
 
 package com.example.mediaapp;
 

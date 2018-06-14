@@ -4,6 +4,7 @@
 * do odpowiednich aktywności
 *
 * */
+//Dodano - Kamil w57449
 
 
 package com.example.mediaapp;

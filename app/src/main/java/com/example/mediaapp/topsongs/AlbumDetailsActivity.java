@@ -2,6 +2,7 @@
 
 *Klasa AlbumDetailsActivity służy do przesyłania informacji szczegółowych na temat albumu
  */
+//Dodano - Rafał w56998
 
 
 package com.example.mediaapp.topsongs;

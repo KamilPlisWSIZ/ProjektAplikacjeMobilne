@@ -1,4 +1,7 @@
-
+//Dodano Rafał w56998
+/*
+* Aktywność ta zwraca najpopularniejsze albumy w ostatnim czasie
+* */
 package com.example.mediaapp.topsongs;
 
 import android.content.Intent;

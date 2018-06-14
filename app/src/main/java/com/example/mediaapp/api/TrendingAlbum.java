@@ -1,5 +1,5 @@
 //Klasa Trending Album służy do przesyłania danych na temat pojedyńczego albumu znajdującego się na topliście
-
+//Dodano Rafał w56998
 package com.example.mediaapp.api;
 
 public class TrendingAlbum {

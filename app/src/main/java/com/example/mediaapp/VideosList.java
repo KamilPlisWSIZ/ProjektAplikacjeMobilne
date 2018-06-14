@@ -3,7 +3,7 @@
 * i przekazać je do elementu ListView
 * */
 
-//Dodał - Kamil w57449
+//Dodano - Kamil w57449
 
 package com.example.mediaapp;
 

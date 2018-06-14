@@ -1,6 +1,7 @@
 /*
 * Klasa SongInfo przesyła informacje na temat konkretnego utworu przechowywanego w pamięci
 * */
+//Dodano - Kamil w57449
 
 package com.example.mediaapp;
 

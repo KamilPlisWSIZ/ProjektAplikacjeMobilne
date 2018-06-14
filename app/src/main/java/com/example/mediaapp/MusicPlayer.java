@@ -1,7 +1,7 @@
 /*
 * Klasa MusicPlayer odpowiada za przesyłanie wszystkich elementów po uruchomieniu aktywności odtwarzacza
 * */
-
+//Dodano - Kamil w57449
 package com.example.mediaapp;
 
         import android.Manifest;
